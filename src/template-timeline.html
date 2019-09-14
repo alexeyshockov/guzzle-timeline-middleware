@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <title>Guzzle Timeline Report</title>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages': ['timeline']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var container = document.getElementById('timeline-tooltip');
+            var chart = new google.visualization.Timeline(container);
+            var dataTable = new google.visualization.DataTable();
+
+            dataTable.addColumn({type: 'string', id: 'Row label'});
+            dataTable.addColumn({type: 'string', id: 'Bar label'});
+            // dataTable.addColumn({type: 'string', role: 'tooltip'});
+            dataTable.addColumn({type: 'number', id: 'Start'});
+            dataTable.addColumn({type: 'number', id: 'End'});
+            dataTable.addRows(/* GUZZLE_TIMELINE_JSON */);
+
+            var options = {
+                timeline: { colorByRowLabel: true }
+            };
+
+            chart.draw(dataTable, options);
+        }
+    </script>
+</head>
+<body>
+<div id="timeline-tooltip" style="height: 100%; width: /* GUZZLE_TIMELINE_WIDTH */em;"></div>
+</body>
+</html>
