@@ -11,3 +11,4 @@ LICENSE export-ignore
 phpunit.xml.dist export-ignore
 README.md export-ignore
 tests/ export-ignore
+docs/ export-ignore
