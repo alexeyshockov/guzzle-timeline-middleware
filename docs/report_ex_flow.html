@@ -1,0 +1,184 @@
+<html lang="en">
+<head>
+    <title>Guzzle Timeline Report</title>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages': ['timeline']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var container = document.getElementById('timeline-tooltip');
+            var chart = new google.visualization.Timeline(container);
+            var dataTable = new google.visualization.DataTable();
+
+            dataTable.addColumn({type: 'string', id: 'Row label'});
+            dataTable.addColumn({type: 'string', id: 'Bar label'});
+            // dataTable.addColumn({type: 'string', role: 'tooltip'});
+            dataTable.addColumn({type: 'number', id: 'Start'});
+            dataTable.addColumn({type: 'number', id: 'End'});
+            dataTable.addRows([
+    [
+        "1",
+        "http:\/\/google.com",
+        1576570336153,
+        1576570336308
+    ],
+    [
+        "1",
+        "http:\/\/www.google.com\/",
+        1576570336309,
+        1576570336516
+    ],
+    [
+        "1",
+        "http:\/\/yandex.ru",
+        1576570336517,
+        1576570336929
+    ],
+    [
+        "2",
+        "http:\/\/yahoo.com",
+        1576570336517,
+        1576570336955
+    ],
+    [
+        "1",
+        "https:\/\/yandex.ru\/",
+        1576570336929,
+        1576570338058
+    ],
+    [
+        "2",
+        "https:\/\/yahoo.com\/",
+        1576570336956,
+        1576570338082
+    ],
+    [
+        "1",
+        "http:\/\/rambler.com",
+        1576570338058,
+        1576570338439
+    ],
+    [
+        "3",
+        "http:\/\/bbc.co.uk",
+        1576570338059,
+        1576570338366
+    ],
+    [
+        "2",
+        "https:\/\/www.yahoo.com\/",
+        1576570338082,
+        1576570338788
+    ],
+    [
+        "3",
+        "https:\/\/bbc.co.uk\/",
+        1576570338366,
+        1576570338922
+    ],
+    [
+        "1",
+        "http:\/\/lighthouse.du.ae?dpid=1&dpruleid=3&cat=23&dplanguage=-&url=http%3a%2f%2frambler%2ecom%2f",
+        1576570338439,
+        1576570338456
+    ],
+    [
+        "1",
+        "http:\/\/lighthouse.du.ae\/index2.php?ucat=&MjM=&uref=aHR0cDovL3JhbWJsZXIuY29tLw==",
+        1576570338456,
+        1576570338471
+    ],
+    [
+        "1",
+        "http:\/\/facebook.com",
+        1576570338472,
+        1576570338831
+    ],
+    [
+        "4",
+        "http:\/\/feedly.com",
+        1576570338472,
+        1576570338626
+    ],
+    [
+        "4",
+        "https:\/\/feedly.com\/",
+        1576570338627,
+        1576570339761
+    ],
+    [
+        "2",
+        "https:\/\/en-maktoob.yahoo.com\/?p=us",
+        1576570338788,
+        1576570341417
+    ],
+    [
+        "1",
+        "https:\/\/facebook.com\/",
+        1576570338831,
+        1576570339291
+    ],
+    [
+        "3",
+        "https:\/\/www.bbc.co.uk\/",
+        1576570338922,
+        1576570340284
+    ],
+    [
+        "1",
+        "https:\/\/www.facebook.com\/",
+        1576570339292,
+        1576570340313
+    ],
+    [
+        "4",
+        "http:\/\/amazon.com",
+        1576570339761,
+        1576570340269
+    ],
+    [
+        "5",
+        "http:\/\/amazon.de",
+        1576570339762,
+        1576570340127
+    ],
+    [
+        "5",
+        "https:\/\/amazon.de\/",
+        1576570340128,
+        1576570340870
+    ],
+    [
+        "4",
+        "https:\/\/amazon.com\/",
+        1576570340270,
+        1576570341196
+    ],
+    [
+        "1",
+        "https:\/\/www.amazon.de\/",
+        1576570340870,
+        1576570341914
+    ],
+    [
+        "3",
+        "https:\/\/www.amazon.com\/",
+        1576570341197,
+        1576570342079
+    ]
+]);
+
+            var options = {
+                timeline: { colorByRowLabel: true }
+            };
+
+            chart.draw(dataTable, options);
+        }
+    </script>
+</head>
+<body>
+<div id="timeline-tooltip" style="height: 100%; width: 60em;"></div>
+</body>
+</html>

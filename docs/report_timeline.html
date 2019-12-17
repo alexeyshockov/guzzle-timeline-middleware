@@ -1,0 +1,184 @@
+<html lang="en">
+<head>
+    <title>Guzzle Timeline Report</title>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages': ['timeline']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var container = document.getElementById('timeline-tooltip');
+            var chart = new google.visualization.Timeline(container);
+            var dataTable = new google.visualization.DataTable();
+
+            dataTable.addColumn({type: 'string', id: 'Row label'});
+            dataTable.addColumn({type: 'string', id: 'Bar label'});
+            // dataTable.addColumn({type: 'string', role: 'tooltip'});
+            dataTable.addColumn({type: 'number', id: 'Start'});
+            dataTable.addColumn({type: 'number', id: 'End'});
+            dataTable.addRows([
+    [
+        "http:\/\/google.com",
+        "http:\/\/google.com",
+        1576570336153,
+        1576570336308
+    ],
+    [
+        "http:\/\/www.google.com\/",
+        "http:\/\/www.google.com\/",
+        1576570336309,
+        1576570336516
+    ],
+    [
+        "http:\/\/yandex.ru",
+        "http:\/\/yandex.ru",
+        1576570336517,
+        1576570336929
+    ],
+    [
+        "http:\/\/yahoo.com",
+        "http:\/\/yahoo.com",
+        1576570336517,
+        1576570336955
+    ],
+    [
+        "https:\/\/yandex.ru\/",
+        "https:\/\/yandex.ru\/",
+        1576570336929,
+        1576570338058
+    ],
+    [
+        "https:\/\/yahoo.com\/",
+        "https:\/\/yahoo.com\/",
+        1576570336956,
+        1576570338082
+    ],
+    [
+        "http:\/\/rambler.com",
+        "http:\/\/rambler.com",
+        1576570338058,
+        1576570338439
+    ],
+    [
+        "http:\/\/bbc.co.uk",
+        "http:\/\/bbc.co.uk",
+        1576570338059,
+        1576570338366
+    ],
+    [
+        "https:\/\/www.yahoo.com\/",
+        "https:\/\/www.yahoo.com\/",
+        1576570338082,
+        1576570338788
+    ],
+    [
+        "https:\/\/bbc.co.uk\/",
+        "https:\/\/bbc.co.uk\/",
+        1576570338366,
+        1576570338922
+    ],
+    [
+        "http:\/\/lighthouse.du.ae?dpid=1&dpruleid=3&cat=23&dplanguage=-&url=http%3a%2f%2frambler%2ecom%2f",
+        "http:\/\/lighthouse.du.ae?dpid=1&dpruleid=3&cat=23&dplanguage=-&url=http%3a%2f%2frambler%2ecom%2f",
+        1576570338439,
+        1576570338456
+    ],
+    [
+        "http:\/\/lighthouse.du.ae\/index2.php?ucat=&MjM=&uref=aHR0cDovL3JhbWJsZXIuY29tLw==",
+        "http:\/\/lighthouse.du.ae\/index2.php?ucat=&MjM=&uref=aHR0cDovL3JhbWJsZXIuY29tLw==",
+        1576570338456,
+        1576570338471
+    ],
+    [
+        "http:\/\/facebook.com",
+        "http:\/\/facebook.com",
+        1576570338472,
+        1576570338831
+    ],
+    [
+        "http:\/\/feedly.com",
+        "http:\/\/feedly.com",
+        1576570338472,
+        1576570338626
+    ],
+    [
+        "https:\/\/feedly.com\/",
+        "https:\/\/feedly.com\/",
+        1576570338627,
+        1576570339761
+    ],
+    [
+        "https:\/\/en-maktoob.yahoo.com\/?p=us",
+        "https:\/\/en-maktoob.yahoo.com\/?p=us",
+        1576570338788,
+        1576570341417
+    ],
+    [
+        "https:\/\/facebook.com\/",
+        "https:\/\/facebook.com\/",
+        1576570338831,
+        1576570339291
+    ],
+    [
+        "https:\/\/www.bbc.co.uk\/",
+        "https:\/\/www.bbc.co.uk\/",
+        1576570338922,
+        1576570340284
+    ],
+    [
+        "https:\/\/www.facebook.com\/",
+        "https:\/\/www.facebook.com\/",
+        1576570339292,
+        1576570340313
+    ],
+    [
+        "http:\/\/amazon.com",
+        "http:\/\/amazon.com",
+        1576570339761,
+        1576570340269
+    ],
+    [
+        "http:\/\/amazon.de",
+        "http:\/\/amazon.de",
+        1576570339762,
+        1576570340127
+    ],
+    [
+        "https:\/\/amazon.de\/",
+        "https:\/\/amazon.de\/",
+        1576570340128,
+        1576570340870
+    ],
+    [
+        "https:\/\/amazon.com\/",
+        "https:\/\/amazon.com\/",
+        1576570340269,
+        1576570341196
+    ],
+    [
+        "https:\/\/www.amazon.de\/",
+        "https:\/\/www.amazon.de\/",
+        1576570340870,
+        1576570341914
+    ],
+    [
+        "https:\/\/www.amazon.com\/",
+        "https:\/\/www.amazon.com\/",
+        1576570341197,
+        1576570342079
+    ]
+]);
+
+            var options = {
+                timeline: { colorByRowLabel: true }
+            };
+
+            chart.draw(dataTable, options);
+        }
+    </script>
+</head>
+<body>
+<div id="timeline-tooltip" style="height: 100%; width: 60em;"></div>
+</body>
+</html>
